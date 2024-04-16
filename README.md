@@ -37,6 +37,14 @@ This is a social media application built using React for the frontend and Node.j
 ## Screenshots
 <img width="925" alt="Screenshot 2024-04-16 155626" src="https://github.com/PreritKhandelwal98/social-media/assets/102379304/d52f07ce-52bf-45b4-ae5b-8bffd2a21767">
 
+<img width="737" alt="login" src="https://github.com/PreritKhandelwal98/social-media/assets/102379304/c79ac25d-e2eb-4fa0-90ad-6b5af6ed34f0">
+
+<img width="942" alt="homePage" src="https://github.com/PreritKhandelwal98/social-media/assets/102379304/0ec5f91a-085e-4c39-a864-e88919a0cf8f">
+
+<img width="375" alt="adding post" src="https://github.com/PreritKhandelwal98/social-media/assets/102379304/81d72968-c68a-4dbc-9644-0c0bbcd890ed">
+
+<img width="866" alt="added post" src="https://github.com/PreritKhandelwal98/social-media/assets/102379304/b412bbc2-e1af-4a2d-92d7-ca399b19ddae">
+
 ## Installation
 1. Clone the repository:
 ```bash
