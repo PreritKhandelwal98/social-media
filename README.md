@@ -35,6 +35,7 @@ This is a social media application built using React for the frontend and Node.j
 ## Demo Video
 
 ## Screenshots
+<img width="925" alt="Screenshot 2024-04-16 155626" src="https://github.com/PreritKhandelwal98/social-media/assets/102379304/d52f07ce-52bf-45b4-ae5b-8bffd2a21767">
 
 ## Installation
 1. Clone the repository:
