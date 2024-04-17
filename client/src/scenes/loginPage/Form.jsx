@@ -15,6 +15,8 @@ import { useDispatch } from "react-redux";
 import { setLogin } from "state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "components/FlexBetween";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),
@@ -74,7 +76,8 @@ const Form = () => {
     onSubmitProps.resetForm();
 
     if (savedUser) {
-      setPageType("login");
+        toast.success("Registered successfully!");
+        setPageType("login");
     }
   };
 
@@ -93,7 +96,10 @@ const Form = () => {
           token: loggedIn.token,
         })
       );
+      toast.success("Logged in successfully!");
       navigate("/home");
+    }else {
+        toast.error("Credentials incorrect");
     }
   };
 

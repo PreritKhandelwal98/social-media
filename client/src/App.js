@@ -7,7 +7,8 @@ import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const mode = useSelector((state) => state.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
@@ -15,7 +16,9 @@ function App() {
 
   return (
     <div className="app">
+
       <BrowserRouter>
+        <ToastContainer />
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
@@ -30,8 +33,10 @@ function App() {
             />
           </Routes>
         </ThemeProvider>
+
       </BrowserRouter>
-    </div>
+
+    </div >
   );
 }
 
