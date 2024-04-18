@@ -1,14 +1,22 @@
 import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
+
 import HomePage from "scenes/homePage";
 import LoginPage from "scenes/loginPage";
 import ProfilePage from "scenes/profilePage";
+import NotificationPage from "scenes/notificationPage";
+import MessagesPage from "scenes/messagesPage";
+import HelpPage from "scenes/helpPage"
+
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "scenes/navbar";
+
 function App() {
   const mode = useSelector((state) => state.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
@@ -18,6 +26,7 @@ function App() {
     <div className="app">
 
       <BrowserRouter>
+
         <ToastContainer />
         <ThemeProvider theme={theme}>
           <CssBaseline />
@@ -31,6 +40,9 @@ function App() {
               path="/profile/:userId"
               element={isAuth ? <ProfilePage /> : <Navigate to="/" />}
             />
+            <Route path="/notifications" element={<NotificationPage />} />
+            <Route path="/messages" element={<MessagesPage />} />
+            <Route path="/helpandsupport" element={<HelpPage />} />
           </Routes>
         </ThemeProvider>
 

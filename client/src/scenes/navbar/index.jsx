@@ -83,9 +83,16 @@ const Navbar = () => {
               <LightMode sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
-          <Message sx={{ fontSize: "25px" }} />
-          <Notifications sx={{ fontSize: "25px" }} />
-          <Help sx={{ fontSize: "25px" }} />
+          <IconButton onClick={() => navigate("/messages")} title="Messages">
+            <Message sx={{ fontSize: "25px" }} />          
+          </IconButton>
+          
+          <IconButton onClick={() => navigate("/notifications")} title="Notifications">
+            <Notifications sx={{ fontSize: "25px" }} />
+          </IconButton>          
+          <IconButton onClick={() => navigate("/helpandsupport")} title="Help & Support">
+            <Help sx={{ fontSize: "25px" }} />
+          </IconButton>
           <FormControl variant="standard" value={fullName}>
             <Select
               value={fullName}
@@ -130,6 +137,7 @@ const Navbar = () => {
           maxWidth="500px"
           minWidth="300px"
           backgroundColor={background}
+          
         >
           {/* CLOSE ICON */}
           <Box display="flex" justifyContent="flex-end" p="1rem">
@@ -158,9 +166,16 @@ const Navbar = () => {
                 <LightMode sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
-            <Message sx={{ fontSize: "25px" }} />
-            <Notifications sx={{ fontSize: "25px" }} />
-            <Help sx={{ fontSize: "25px" }} />
+            <IconButton onClick={() => navigate("/messages")} title="Messages">
+              <Message sx={{ fontSize: "25px" }} />      
+            </IconButton>
+            <IconButton onClick={() => navigate("/notifications")} title="Notifications">
+              <Notifications sx={{ fontSize: "25px" }} />
+            </IconButton>
+            <IconButton onClick={() => navigate("/helpandsupport")} title="Help & Support">
+              <Help sx={{ fontSize: "25px" }} />
+            </IconButton>
+            
             <FormControl variant="standard" value={fullName}>
               <Select
                 value={fullName}
